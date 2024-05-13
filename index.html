@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>STEGANOGRAFI - Metode LSB</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #E1F7F5;
+      padding: 20px;
+    }
+
+    .judul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container-upload {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .container-buka {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .container-foto {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+    }
+
+    .kotak {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    canvas {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+      .button button {
+    background-color: #0E46A3; /* Ubah warna background tombol */
+    color: white; /* Ubah warna teks tombol */
+    border: none; /* Hilangkan border */
+    padding: 10px 20px; /* Sesuaikan padding */
+    border-radius: 5px; /* Tambahkan border-radius */
+    cursor: pointer;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="judul">
+    <h1>STEGANOGRAFI - METODE LSB</h1>
+  </div>
+  <div class="container-upload">
+    <div class="box">
+      <div class="kotak">
+        Masukan File Teks :
+        <input type="file" id="myFile" />
+      </div>
+      <div class="kotak">
+        Masukan Foto :
+        <input type="file" id="cover" />
+      </div>
+    </div>
+    <div class="button">
+      <button id="hideData">Sisipkan</button>
+    </div>
+  </div>
+
+
+  <div class="container-foto">
+    <div class="kotak">
+      Foto sebelum disisipkan:
+      <canvas id="canvas" width="400" height="400"></canvas>
+    </div>
+    <div class="kotak">
+      Foto setelah disisipkan, save as untuk menyimpan:
+      <canvas id="secret" width="400" height="400"></canvas>
+    </div>
+  </div>
+
+
+  <div class="container-buka">
+    <div class="kotak">
+      Mengeluarkan file teks, file terdownload otomatis:
+      <input type="file" id="loadFile" />
+    </div>
+    <div class="kotak">
+      Foto:
+      <canvas id="coverAfter" width="400" height="400"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
